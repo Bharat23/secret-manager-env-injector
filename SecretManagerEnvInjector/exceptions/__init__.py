@@ -1,1 +1,1 @@
-from exceptions.invalid_input import InvalidInputException
+from SecretManagerEnvInjector.exceptions.invalid_input import InvalidInputException

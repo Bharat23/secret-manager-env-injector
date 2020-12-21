@@ -4,7 +4,7 @@ import re
 
 from botocore.exceptions import ClientError
 
-from exceptions import InvalidInputException
+from SecretManagerEnvInjector.exceptions import InvalidInputException
 
 class SecretExtractor():
 

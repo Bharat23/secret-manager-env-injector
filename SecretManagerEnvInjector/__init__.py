@@ -1,7 +1,7 @@
 import os
 import logging
 
-from secret_extractor import SecretExtractor
+from SecretManagerEnvInjector.secret_extractor import SecretExtractor
 
 logger = logging.getLogger()
 
@@ -24,7 +24,7 @@ def inject(secret_arn: str, region: str = 'us-east-1', custom_secret_name:str = 
     return inner_wrap
 
 if __name__ == '__main__':
-    @inject('arn:aws:secretsmanager:us-east-1:878616621923:secret:bogus-dj3g0R', 'us-east-1', 'my-secret')
+    @inject('arn:aws:secretsmanager:us-xxxx-1:xxxxxxxxxxx:secret:bogus-dj3g0R', 'us-east-1', 'my-secret')
     def test():
         print("hello")
     test()
