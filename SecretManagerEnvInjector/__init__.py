@@ -18,7 +18,7 @@ def inject(secret_arn: str, region: str = 'us-east-1', custom_secret_name:str = 
                 if secret:
                     os.environ[str(secret_name)] = secret
             except Exception as ex:
-                logger.error('Exception: ', ex)
+                logger.error('Exception: {}'.format(ex))
             return func(*args, **kwargs)
         return wrap
     return inner_wrap

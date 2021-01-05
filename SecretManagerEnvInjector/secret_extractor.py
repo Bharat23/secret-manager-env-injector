@@ -54,6 +54,9 @@ class SecretExtractor():
             elif e.response['Error']['Code'] == 'ExpiredToken':
                 # token used for calling has expired
                 raise e
+            elif e.response['Error']['Code'] == 'AccessDeniedException':
+                # unauthorized user access
+                raise e
 
     def get_secret_name(self):
         if self.secret_name:

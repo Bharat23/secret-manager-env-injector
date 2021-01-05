@@ -16,7 +16,7 @@ except IOError:
 setuptools.setup(
     name="secret-manager-env-injector",
     package=['secret-manager-env-injector'],
-    version="0.0.1",
+    version="0.0.3",
     author="Bharat Sinha",
     author_email="bharat.sinha.2307@gmail.com",
     description=description,
